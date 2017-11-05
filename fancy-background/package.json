@@ -1,0 +1,24 @@
+{
+  "name": "projector",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "node-less-chokidar": "^0.1.2",
+    "npm-run-all": "^4.1.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-scripts": "1.0.14",
+    "react-timeout": "^1.0.1"
+  },
+  "main": "src/electron-main.js",
+  "scripts": {
+    "start": "npm-run-all -p watch-css start-js",
+    "start-js": "react-scripts start",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "build-css": "node-less-chokidar src",
+    "watch-css": "node-less-chokidar src --watch"
+  }
+}
